@@ -19,7 +19,28 @@ This is a program that performs calculations on a series of numbers with two mat
 1. Clone this repo: `$git clone https://github.com/JunshengFu/calculator.git`
 2. Clean the project: `$./clean.sh`
 3. Build the project: `$./build.sh` 
-4. Run unit test for **Divider** engine: `$./run_unitTest_divider.sh`
+4. Run unit test for **Divider** engine: `$ ./run_unitTest_divider.sh`
+```
+ ✓ (Divider engine) Illegal Input test: input no enough arguments
+ ✓ (Divider engine) Illegal Input test: input wrong math engine
+ ✓ (Divider engine) Illegal Input test: input illegal *.txt file
+ ✓ (Divider engine) Illegal Input test: input non-exist *.txt file
+ ✓ (Divider engine) Integers inputs test: inputs 0 integer
+ ✓ (Divider engine) Integers inputs test: inputs 1 integer
+ ✓ (Divider engine) Integers inputs test: inputs 2 integers
+ ✓ (Divider engine) Integers inputs test: contain non-intergers
+ ✓ (Divider engine) Integers inputs test: ZERO denominator
+ ✓ (Divider engine) List_files inputs test: input 0 list_file
+ ✓ (Divider engine) List_files inputs test: input 1 list_file
+ ✓ (Divider engine) List_files inputs test: input 2 list_files
+ ✓ (Divider engine) List_files inputs test: contain non-integers
+ ✓ (Divider engine) List_files inputs test: ZERO denominator
+
+14 tests, 0 failures
+```
+
+
+
 5. Command line usages:
  
 ```
