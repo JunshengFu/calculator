@@ -1,12 +1,11 @@
-/*
- * base.h
- *
- *  Created on: 2 July, 2017
- *  Author: Junsheng Fu
- */
-
 #ifndef CALENG_FACTORY_CALCULATOR_H
 #define CALENG_FACTORY_CALCULATOR_H
+
+/** @brief Base class for any calculation engine
+
+    @author Junsheng Fu
+    @date 2 July 2017
+    */
 
 #include <iostream>
 #include <vector>
@@ -18,7 +17,7 @@ class Base{
 public:
 
   /**
-   * Constructor
+   * Default Constructor
    */
   Base(){};
 

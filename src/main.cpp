@@ -1,3 +1,9 @@
+/** @brief Main function for Calculation Engines
+
+    @author Junsheng Fu
+    @date 2 July 2017
+    */
+
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,9 +1,8 @@
-/*
- * divider.h
- *
- *  Created on: 2 July, 2017
- *  Author: Junsheng Fu
- */
+/** @brief Divider class for division
+
+    @author Junsheng Fu
+    @date 2 July 2017
+    */
 
 #ifndef CALENG_FACTORY_DIVIDER_H
 #define CALENG_FACTORY_DIVIDER_H
@@ -16,8 +15,8 @@ class Divider: public Base<T>{
 public:
 
   /**
- * Constructor
- */
+   * Constructor
+   */
   Divider();
 
   /**

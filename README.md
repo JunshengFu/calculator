@@ -11,7 +11,8 @@ This is a program that performs calculations on a series of numbers with two mat
 * cmake >= 3.5
 * make >= 4.1
 * gcc/g++ >= 5.4
-* [bats](https://github.com/sstephenson/bats) (a unit test framework for bash) >= 0.4.0
+* [bats](https://github.com/sstephenson/bats) (a unit test framework for bash) >= 0.4.0, 
+and **it will be automatically downloaded** when user run bash file `$ ./run_unitTest_divider.sh`
    
 
 ### 2. How to run the code
@@ -86,8 +87,8 @@ $20000
 * [clean.sh](clean.sh) cleans the project.
 * [build.sh](build.sh) builds the project.
 * [run_unitTest_divider.sh](run_unitTest_divider.sh) runs the unit test for Divider.
-* [unit_test](unit_test) folder contains the [unit test framework bats](https://github.com/sstephenson/bats) and 
-my unit test code [divider.bats](unit_test/divider.bats). 
+* [unit_test](unit_test) folder contains the [unit test framework bats](https://github.com/sstephenson/bats)(it will 
+be automatically downloaded when run the bash of unit_test) and my unit test code [divider.bats](unit_test/divider.bats). 
 * [CMakeLists.txt](CMakeLists.txt) is the cmake file.
 * [data](data) folder contains list of files contains number and characters.
 * [src](src) folder contains the source code.

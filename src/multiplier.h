@@ -1,12 +1,11 @@
-/*
- * multiplier.h
- *
- *  Created on: 2 July, 2017
- *  Author: Junsheng Fu
- */
-
 #ifndef CALENG_FACTORY_MULTIPLIER_H
 #define CALENG_FACTORY_MULTIPLIER_H
+
+/** @brief Multiplier class for multiplication
+
+    @author Junsheng Fu
+    @date 2 July 2017
+    */
 
 #include <iostream>
 #include "base.h"

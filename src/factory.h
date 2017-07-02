@@ -1,12 +1,12 @@
-/*
- * factory.h
- *
- *  Created on: 2 July, 2017
- *  Author: Junsheng Fu
- */
-
 #ifndef CALENG_FACTORY_FACTORY_H
 #define CALENG_FACTORY_FACTORY_H
+
+/** @brief Factory method code
+
+    @author Junsheng Fu
+    @date 2 July 2017
+    */
+
 
 #include "divider.h"
 #include "multiplier.h"
