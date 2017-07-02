@@ -26,7 +26,7 @@ int main(int argc, char* argv[]) {
     try {
       Base<double> *f = Base<double>::select_engine(engine_name);
       double res = f->compute(arr);
-      std::cout << res;
+      std::cout << res<<std::endl;
     }
     catch (const char *msg) {
       std::cerr << msg << std::endl;
