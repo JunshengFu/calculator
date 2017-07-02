@@ -2,7 +2,7 @@
 
 ## Objective
 This is a program that performs calculations on a series of numbers with two math engine, 
-"Multiplier" and "Divider".
+"Multiplier" and "Divider". It is implemented with template and factory method in C++.
 
 
 ## Code & Files
@@ -98,13 +98,115 @@ be automatically downloaded when run the bash of unit_test) and my unit test cod
 * Automatically created documentation by [Doxygen](http://www.stack.nl/~dimitri/doxygen/) is
 available here [documents/html/index.html](documents/html/index.html).
 
-* Brief summary:
-    * [`base.h`](src/base.h) is the base class for any calculation engine.
-    * [`multiplier.h`](src/multiplier.h) and [`multiplier.cpp`](src/multiplier.cpp) are the derived class for multiplication.
-    * [`divider.h`](src/divider.h) and [`divider.cpp`](src/divider.cpp) are the derived class for division. 
-    * [`factory.h`](src/factory.h) is the factory method.
-    * [`helper_functions.h`](src/helper_functions.h) contains some help functions for arguments parsing.
-    * [`main.cpp`](src/main.cpp) is the main function.
+**Brief summary of the code design**:
+* [`base.h`](src/base.h) is the base class for any calculation engine.
+    
+    ```
+    template <typename T>
+    class Base{
+    public:
+    
+      /**
+       * Default Constructor
+       */
+      Base(){};
+    
+      /**
+       * Destructor
+       */
+      virtual ~Base(){};
+    
+      /**
+       * Select one math engine by giving the engine name
+       * @param engine_name name of a math engine
+       * @return a point to a selected engine
+       */
+      static Base *select_engine(std::string& engine_name);
+    
+      /**
+       * Compute the input data
+       * @param arr data given by the users
+       * @return result of computation
+       */
+      virtual double compute(const vector<T>& arr) = 0;
+    
+    };
+    
+    ```
+    
+* [`multiplier.h`](src/multiplier.h) and [`multiplier.cpp`](src/multiplier.cpp) are the derived class for multiplication.
+    
+    ```
+    template <typename T>
+    class Multiplier: public Base<T>{
+    
+    public:
+    
+      /**
+       * Constructor
+       */
+      Multiplier();
+    
+      /**
+       * Destructor
+       */
+      virtual ~Multiplier();
+    
+      /**
+       * Compute the multiplication with given data
+       * @param arr data to be multiplied
+       * @return result of the multiplication
+       */
+      double compute(const vector<T>& arr);
+    };    
+    ```
+    
+    
+* [`divider.h`](src/divider.h) and [`divider.cpp`](src/divider.cpp) are the derived class for division. 
+    ```
+    template <typename T>
+    class Divider: public Base<T>{
+    public:
+    
+      /**
+       * Constructor
+       */
+      Divider();
+    
+      /**
+       * Destructor
+       */
+      virtual ~Divider();
+    
+      /**
+       * Compute the division with given data
+       * @param arr data to be divided
+       * @return result of the division
+       */
+      double compute(const vector<T>& arr);
+    };
+   ```
+
+* [`factory.h`](src/factory.h) is the code of factory method.
+
+   ```
+    template <typename T>
+    Base<T> *Base<T>::select_engine(std::string &engine_name) {
+    
+      // select either one of the two engines
+      if (engine_name.compare("Multiplier") == 0) {
+        return  new Multiplier<T>;
+      }
+      else if (engine_name.compare("Divider") == 0) {
+        return new Divider<T>;
+      }
+      else{
+        throw "Invalid Math Engine: use either \"Multipiler\" or \"Divider!";
+      }
+    }
+   ```
+* [`helper_functions.h`](src/helper_functions.h) contains some help functions for arguments parsing.
+* [`main.cpp`](src/main.cpp) is the main function.
  
 
 ### 5. Code Style
