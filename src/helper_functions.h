@@ -13,14 +13,22 @@
 #include <exception>
 #include <fstream>
 
-
-inline void printUsage(){
+/**
+ * Print the usage of the program
+ */
+void printUsage(){
   std::cout<< "--------------------------------------------------"<<std::endl
            << "Usage 1: calc <engine_name> <file_list>"<<std::endl
            << "Usage 2: calc <engine_name> <list of integers>" << std::endl;
 }
 
-inline bool checkValidArg(int argc, char* argv[]){
+/**
+ * Check the input argument values are valid or not
+ * @param argc number of arguments
+ * @param argv list of arguments
+ * @return true or false based on the validation
+ */
+bool checkValidArg(int argc, char* argv[]){
   if (argc < 3){
     std::cout << "No enough argument values: please follow these two usages."<<std::endl;
     printUsage();
@@ -36,14 +44,26 @@ inline bool checkValidArg(int argc, char* argv[]){
   return true;
 }
 
-inline bool ending_check(std::string const & source, std::string const & ending)
+/**
+ * Check the string's ending
+ * @param source the string to be checked
+ * @param ending the pattern ending string
+ * @return true or false based on the result
+ */
+bool ending_check(std::string const & source, std::string const & ending)
 {
   if (ending.size() > source.size()) return false;
   return std::equal(ending.rbegin(), ending.rend(), source.rbegin());
 }
 
-
-inline bool readTxtFiles(std::vector <std::string>& file_list, std::vector <double>& arr){
+/**
+ * Read the files contain numbers, and save them into arr.
+ * Stop reading the numbers into arr as soon as meet a "illegal number" (e.g #)
+ * @param file_list file lists that contains numbers
+ * @param arr save all the numbers from the file lists
+ * @return true or false based on the status
+ */
+bool readTxtFiles(std::vector <std::string>& file_list, std::vector <double>& arr){
   if (file_list.empty()){
     std::cout<<"Inputs Error: no input files are given!"<<std::endl;
     return false;
@@ -70,8 +90,14 @@ inline bool readTxtFiles(std::vector <std::string>& file_list, std::vector <doub
 
 }
 
-inline bool getInputs(std::vector <double>& arr, int argc, char* argv[]){
-
+/**
+ * Parse the list file or individual numbers given by the user through commands
+ * @param arr a double vector which is used for saving the numbers
+ * @param argc number of arguments
+ * @param argv list of arguments
+ * @return true or false based on the status
+ */
+bool getInputs(std::vector <double>& arr, int argc, char* argv[]){
 
   // read file_list or list of integers
   std::string arg;
