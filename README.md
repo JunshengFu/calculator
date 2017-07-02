@@ -12,7 +12,7 @@ This is a program that performs calculations on a series of numbers with two mat
 * make >= 4.1
 * gcc/g++ >= 5.4
 * [bats](https://github.com/sstephenson/bats) (a unit test framework for bash) >= 0.4.0, 
-and **it will be automatically downloaded** when user run bash file `$ ./run_unitTest_divider.sh`
+and **it will be automatically downloaded** when user runs bash file `$ ./run_unittest_divider.sh`
    
 
 ### 2. How to run the code
