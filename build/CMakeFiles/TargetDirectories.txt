@@ -1,3 +1,0 @@
-/home/junsheng/code/github/calculator/build/CMakeFiles/rebuild_cache.dir
-/home/junsheng/code/github/calculator/build/CMakeFiles/edit_cache.dir
-/home/junsheng/code/github/calculator/build/CMakeFiles/calc.dir
