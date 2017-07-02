@@ -1,11 +1,9 @@
 # Calculation Engines
 
-### Objective
+## Objective
 This is a program that performs calculations on a series of numbers with two math engine, 
 "Multiplier" and "Divider".
 
-
----
 
 ## Code & Files
 ### 1. Dependencies & environment
