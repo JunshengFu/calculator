@@ -8,6 +8,7 @@
 #include "multiplier.h"
 #include <vector>
 #include <cmath>
+#include <limits>
 
 using namespace std;
 
@@ -17,16 +18,20 @@ double Multiplier<T>::compute(const vector<T>& arr){
     throw "This an empty list!";
   }
 
-  int THRESHOLD = 100;
+  // compute the max number of digits that double can represent, and save it as threshold
+  double MAX_DOUBLE = std::numeric_limits<double>::max();
+  double threshold = std::floor(log10(MAX_DOUBLE)) ;
+
   double product = 1.0;
-  double d1 = log10(product); // number of digits
 
   for(const auto& tmp: arr){
+
+    double d1 = log10(product); // current number of digits for product
     double tmp_d = double(tmp);
-    double d2 = log10(tmp_d);
+    double d2 = log10(tmp_d);   // number of digits for the value to be multiplied
 
     // check possibility of overflow for further multiply
-    if(d1 + d2 > THRESHOLD){
+    if(d1 + d2 > threshold){
       throw "These integers are too big for multiplication!";
     }
     else{
