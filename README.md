@@ -20,7 +20,7 @@ and **it will be automatically downloaded** when user run bash file `$ ./run_uni
 1. Clone this repo: `$git clone https://github.com/JunshengFu/calculator.git`
 2. Clean the project: `$./clean.sh`
 3. Build the project: `$./build.sh` 
-4. Run unit test for **Divider** engine: `$ ./run_unitTest_divider.sh`
+4. Run unit tests for **Divider** engine: `$ ./run_unittest_divider.sh`
 
 ```
  ✓ (Divider engine) Illegal Input test: input no enough arguments
@@ -85,7 +85,7 @@ $20000
 
 * [clean.sh](clean.sh) cleans the project.
 * [build.sh](build.sh) builds the project.
-* [run_unitTest_divider.sh](run_unitTest_divider.sh) runs the unit test for Divider.
+* [run_unittest_divider.sh](run_unittest_divider.sh) runs the unit test for Divider.
 * [unit_test](unit_test) folder contains the [unit test framework bats](https://github.com/sstephenson/bats)(it will 
 be automatically downloaded when run the bash of unit_test) and my unit test code [divider.bats](unit_test/divider.bats). 
 * [CMakeLists.txt](CMakeLists.txt) is the cmake file.
