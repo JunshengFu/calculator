@@ -12,8 +12,17 @@
 
 using namespace std;
 
+
+template <typename T>
+Multiplier<T>::Multiplier() {};
+
+template <typename T>
+Multiplier<T>:: ~Multiplier(){};
+
+
 template <typename T>
 double Multiplier<T>::compute(const vector<T>& arr){
+
   if(arr.empty()){
     throw "This an empty list!";
   }

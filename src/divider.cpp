@@ -12,6 +12,13 @@
 using namespace std;
 
 template <typename T>
+Divider<T>::Divider() {};
+
+template <typename T>
+Divider<T>:: ~Divider(){};
+
+
+template <typename T>
 double Divider<T>::compute(const vector<T>& arr){
   if(arr.empty()){
     throw "This an empty input!";
@@ -26,7 +33,6 @@ double Divider<T>::compute(const vector<T>& arr){
       res /= double(arr[i]);
     }
   }
-
   return res;
 }
 

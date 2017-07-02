@@ -15,6 +15,7 @@
 template <typename T>
 Base<T> *Base<T>::select_engine(std::string &engine_name) {
 
+  // select either one of the two engines
   if (engine_name.compare("Multiplier") == 0) {
     return  new Multiplier<T>;
   }

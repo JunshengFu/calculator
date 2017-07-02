@@ -14,6 +14,22 @@
 template <typename T>
 class Divider: public Base<T>{
 public:
+
+  /**
+ * Constructor
+ */
+  Divider();
+
+  /**
+   * Destructor
+   */
+  virtual ~Divider();
+
+  /**
+   * Compute the division with given data
+   * @param arr data to be divided
+   * @return result of the division
+   */
   double compute(const vector<T>& arr);
 };
 
